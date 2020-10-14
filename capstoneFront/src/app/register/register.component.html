@@ -1,0 +1,63 @@
+<div class="container-fluid rounded-0 ">
+    <h4 class="text-center text-capitalize my-3">
+        <span class="text-success"> {{message}}</span>
+    </h4>
+
+    <!-- Default form register -->
+    <form class="text-center border border-light p-5 bg-light rounded-0 " style="height: 30%;"
+        (ngSubmit)="handleSubmit(data)" #data="ngForm">
+
+        <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="router-link-active">
+            <i class="fas fa-gamepad fa-3x d-inline-block align-top text-dark"></i>
+        </a>
+        <p class="h4 mb-4">Please register yourself</p>
+
+        <div class="form-row mb-4">
+            <div class="col">
+                <!-- First name -->
+                <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="Team name"
+                    name="teamName" [(ngModel)]="players.teamName" ngModel required>
+
+            </div>
+            <div class="col">
+                <!-- Last name -->
+                <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Your name"
+                    name="playerName" [(ngModel)]="players.playerName" ngModel required>
+            </div>
+        </div>
+
+        <input type="number" placeholder="you must be 18 or above" class="form-control mb-4" name="playerAge"
+            [(ngModel)]="players.playerAge" ngModel required>
+
+
+        <div class="form-group">
+            <textarea class="form-control rounded-0 mb-4" rows="3" placeholder="Enter you caption"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="file" class="form-control rounded-0 mb-4 ">
+        </div>
+
+
+
+        <!-- Sign up button -->
+        <button class="btn btn-dark my-4 btn-block" type="submit" (click)="register()"
+            [disabled]="data.invalid">Register</button>
+
+        <!-- Social register -->
+        <p>or sign up with:</p>
+
+        <a href="#" class="mx-2" role="button"><i class="fab fa-facebook-f light-blue-text"></i></a>
+        <a href="#" class="mx-2" role="button"><i class="fab fa-twitter light-blue-text"></i></a>
+        <a href="#" class="mx-2" role="button"><i class="fab fa-linkedin-in light-blue-text"></i></a>
+        <a href="#" class="mx-2" role="button"><i class="fab fa-github light-blue-text"></i></a>
+
+        <hr>
+
+        <!-- Terms of service -->
+        <p>By clicking
+            <em>Sign up</em> you agree to our
+            <a href="#" target="_blank">terms of service</a>
+
+    </form>
+    <!-- Default form register -->
+</div>

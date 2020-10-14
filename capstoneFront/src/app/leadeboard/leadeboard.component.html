@@ -1,0 +1,19 @@
+<div class="container my-5">
+    <table class="table">
+        <thead>
+            <tr class="bg-light text-info">
+
+                <th scope="col">Team</th>
+                <th scope="col">Player</th>
+                <th scope="col">Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng *ngFor="let item of leaderData">
+                <td>{{item.teamName}}</td>
+                <td>{{item.playerName}}</td>
+                <td>{{item.score}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
